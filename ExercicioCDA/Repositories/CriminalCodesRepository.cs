@@ -1,6 +1,12 @@
 ﻿namespace ExercicioCDA.Repositories
 {
-    public class CriminalCodesRepository
+    public interface ICriminalRepository
     {
+
+    }
+
+    public class CriminalCodesRepository : ICriminalRepository
+    {
+       
     }
 }
