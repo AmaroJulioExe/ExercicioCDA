@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using ExercicioCDA.Models.Entities;
+using ExercicioCDA.Repositories;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ExercicioCDA.Controllers
@@ -7,6 +9,13 @@ namespace ExercicioCDA.Controllers
     [ApiController]
     public class CriminalCodesController : ControllerBase
     {
+        private readonly ICriminalRepository repos;
+
+        public CriminalCodesController(ICriminalRepository _repos)
+        {
+            repos = _repos;
+        }
+
         [HttpGet]
         public IActionResult Get()
         {
@@ -14,9 +23,13 @@ namespace ExercicioCDA.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post()
+        public IActionResult Post(PostCriminalCodes postcriminalcode)
         {
-            return Ok();
+            if (repos.Create(postcriminalcode))
+            {
+                return Ok();
+            }
+            return BadRequest();
         }
 
         [HttpPut]

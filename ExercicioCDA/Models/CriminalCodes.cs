@@ -8,9 +8,9 @@ namespace ExercicioCDA.Models
         [Key]
         public int Id { get; set; }
         [Required]
-        public string Name { get; set; }
+        public string? Name { get; set; }
         [Required]
-        public string Description { get; set; }
+        public string? Description { get; set; }
         [Required]
         public decimal Penalty { get; set; }
         [Required]
@@ -23,8 +23,8 @@ namespace ExercicioCDA.Models
         [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime UpdateDate { get; set; }
 
-        public Status StatusId { get; set; }
-        public Users CreateUserId { get; set; }
-        public Users UpdateUserId { get; set; }
+        public Status? StatusId { get; set; }
+        public Users? CreateUserId { get; set; }
+        public Users? UpdateUserId { get; set; }
     }
 }
