@@ -1,12 +1,13 @@
 ﻿using ExercicioCDA.Models;
-using ExercicioCDA.Models.Entities;
+using ExercicioCDA.Models.Entities.CriminalCodes;
 
 namespace ExercicioCDA.Repositories
 {
     public interface ICriminalRepository
     {
-        public bool Create(PostCriminalCodes criminalcode); 
-        //public bool Update(PostCriminalCodes criminalcode);
+        public bool Create(PostCriminalCodes criminalcode);
+        public CriminalCodes Read(int Id);
+        public bool Update(PutCriminalCodes criminalcode);
     }
 
     public class CriminalCodesRepository : ICriminalRepository
@@ -40,6 +41,42 @@ namespace ExercicioCDA.Repositories
             {
                 return false;
             }
+        }
+
+        public CriminalCodes Read(int id)
+        {
+            try
+            {
+                var criminalcode_db = db.CriminalCodes.Find(id);
+                return criminalcode_db;
+            }
+            catch
+            {
+
+                return new CriminalCodes();
+            }
+        }
+
+        public bool Update(PutCriminalCodes criminalcode)
+        {
+            try
+            {
+                var criminalcode_db = db.CriminalCodes.Find(criminalcode.id);
+                criminalcode_db.Name = criminalcode.Name;
+                criminalcode_db.Description = criminalcode.Description;
+                criminalcode_db.Penalty = criminalcode.Penalty;
+                criminalcode_db.StatusId = criminalcode.StatusId;
+                criminalcode_db.UpdateDate = criminalcode.UpdateDate;
+                criminalcode_db.UpdateUserId = criminalcode.UpdateUserId;
+
+                db.SaveChanges();
+                return true;
+
+            }
+            catch 
+            {
+                return false;
+            }            
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using ExercicioCDA.Models.Entities;
+﻿using ExercicioCDA.Models;
+using ExercicioCDA.Models.Entities.CriminalCodes;
 using ExercicioCDA.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -16,10 +17,11 @@ namespace ExercicioCDA.Controllers
             repos = _repos;
         }
 
-        [HttpGet]
-        public IActionResult Get()
+        [HttpGet("{Id}")]
+        public IActionResult Get([FromRoute]CriminalCodeId criminalcode)
         {
-            return Ok();
+            var criminalcode_db = repos.Read(criminalcode.Id);
+            return Ok(criminalcode_db);
         }
 
         [HttpPost]

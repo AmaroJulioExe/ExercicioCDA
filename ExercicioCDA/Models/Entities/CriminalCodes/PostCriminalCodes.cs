@@ -1,4 +1,4 @@
-﻿namespace ExercicioCDA.Models.Entities
+﻿namespace ExercicioCDA.Models.Entities.CriminalCodes
 {
     public class PostCriminalCodes
     {

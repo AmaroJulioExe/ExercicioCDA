@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vUtM2Y84o+4PSED4NSEtTyFAmDv7n0NJfZ6XYWo0vvQwZb1yqWYlLegZDbBTD6Ii6QTwP63qotkh2AaaMzMJqg==",
+  "dgSpecHash": "dKg2Qxtf4HJcRMCgt5F/5quG2Z6ZjD34VMgNpcq/wnMU1q6hf24cDZi1S4tciIQN/RE1WABXMxONKkgkFbEqEQ==",
   "success": true,
-  "projectFilePath": "D:\\Documents\\Programação\\exercicioCDA\\ExercicioCDA\\ExercicioCDA.csproj",
+  "projectFilePath": "D:\\Documents\\Programação\\ExercicioCDA\\ExercicioCDA\\ExercicioCDA.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Julio Amaro\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Julio Amaro\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
