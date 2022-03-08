@@ -35,15 +35,24 @@ namespace ExercicioCDA.Controllers
         }
 
         [HttpPut]
-        public IActionResult Put()
+        public IActionResult Put(PutCriminalCodes putcriminalcode)
         {
-            return Ok();
+            if (repos.Update(putcriminalcode))
+            {
+                return Ok();
+            }
+
+            return BadRequest();
         }
 
-        [HttpDelete]
-        public IActionResult Delete()
+        [HttpDelete("{Id}")]
+        public IActionResult Delete([FromRoute] CriminalCodeId criminalcode)
         {
-            return Ok();
+            if (repos.Delete(criminalcode.Id))
+            {
+                return Ok();
+            }
+            return BadRequest();
         }
     
     }

@@ -6,8 +6,10 @@ namespace ExercicioCDA.Repositories
     public interface ICriminalRepository
     {
         public bool Create(PostCriminalCodes criminalcode);
-        public CriminalCodes Read(int Id);
         public bool Update(PutCriminalCodes criminalcode);
+        public CriminalCodes Read(int Id);
+        public bool Delete(int Id);
+        
     }
 
     public class CriminalCodesRepository : ICriminalRepository
@@ -62,6 +64,7 @@ namespace ExercicioCDA.Repositories
             try
             {
                 var criminalcode_db = db.CriminalCodes.Find(criminalcode.id);
+
                 criminalcode_db.Name = criminalcode.Name;
                 criminalcode_db.Description = criminalcode.Description;
                 criminalcode_db.Penalty = criminalcode.Penalty;
@@ -77,6 +80,21 @@ namespace ExercicioCDA.Repositories
             {
                 return false;
             }            
+        }
+
+        public bool Delete(int id)
+        {
+            try
+            {
+                var criminalcodes_db = db.CriminalCodes.Find(id);
+                db.CriminalCodes.Remove(criminalcodes_db);
+                db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

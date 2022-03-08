@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documents\\Programação\\ExercicioCDA\\ExercicioCDA\\ExercicioCDA.csproj": {}
+    "D:\\Documents\\Programação\\exercicioCDA\\ExercicioCDA\\ExercicioCDA.csproj": {}
   },
   "projects": {
-    "D:\\Documents\\Programação\\ExercicioCDA\\ExercicioCDA\\ExercicioCDA.csproj": {
+    "D:\\Documents\\Programação\\exercicioCDA\\ExercicioCDA\\ExercicioCDA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documents\\Programação\\ExercicioCDA\\ExercicioCDA\\ExercicioCDA.csproj",
+        "projectUniqueName": "D:\\Documents\\Programação\\exercicioCDA\\ExercicioCDA\\ExercicioCDA.csproj",
         "projectName": "ExercicioCDA",
-        "projectPath": "D:\\Documents\\Programação\\ExercicioCDA\\ExercicioCDA\\ExercicioCDA.csproj",
+        "projectPath": "D:\\Documents\\Programação\\exercicioCDA\\ExercicioCDA\\ExercicioCDA.csproj",
         "packagesPath": "C:\\Users\\Julio Amaro\\.nuget\\packages\\",
-        "outputPath": "D:\\Documents\\Programação\\ExercicioCDA\\ExercicioCDA\\obj\\",
+        "outputPath": "D:\\Documents\\Programação\\exercicioCDA\\ExercicioCDA\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Julio Amaro\\AppData\\Roaming\\NuGet\\NuGet.Config",
