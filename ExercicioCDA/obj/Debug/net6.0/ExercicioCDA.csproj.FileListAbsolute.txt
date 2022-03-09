@@ -59,3 +59,13 @@ D:\Documents\Programação\exercicioCDA\ExercicioCDA\obj\Debug\net6.0\refint\Exe
 D:\Documents\Programação\exercicioCDA\ExercicioCDA\obj\Debug\net6.0\ExercicioCDA.pdb
 D:\Documents\Programação\exercicioCDA\ExercicioCDA\obj\Debug\net6.0\ExercicioCDA.genruntimeconfig.cache
 D:\Documents\Programação\exercicioCDA\ExercicioCDA\obj\Debug\net6.0\ref\ExercicioCDA.dll
+D:\Documents\Programação\exercicioCDA\ExercicioCDA\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Documents\Programação\exercicioCDA\ExercicioCDA\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Documents\Programação\exercicioCDA\ExercicioCDA\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Documents\Programação\exercicioCDA\ExercicioCDA\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Documents\Programação\exercicioCDA\ExercicioCDA\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+D:\Documents\Programação\exercicioCDA\ExercicioCDA\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+D:\Documents\Programação\exercicioCDA\ExercicioCDA\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+D:\Documents\Programação\exercicioCDA\ExercicioCDA\bin\Debug\net6.0\System.Web.Http.dll
+D:\Documents\Programação\exercicioCDA\ExercicioCDA\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Documents\Programação\exercicioCDA\ExercicioCDA\bin\Debug\net6.0\Swashbuckle.Core.dll

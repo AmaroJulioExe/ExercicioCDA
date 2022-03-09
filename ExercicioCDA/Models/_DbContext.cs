@@ -20,5 +20,6 @@ namespace ExercicioCDA.Models
             //builder.Entity<Status>().ToTable("Status");
         }
 
+
     }
 }

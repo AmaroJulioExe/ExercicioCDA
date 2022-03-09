@@ -1,6 +1,7 @@
 ﻿using ExercicioCDA.Models;
 using ExercicioCDA.Models.Entities.CriminalCodes;
 using ExercicioCDA.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,6 +18,13 @@ namespace ExercicioCDA.Controllers
             repos = _repos;
         }
 
+        /// <summary>
+        /// Get the criminal code using the ID.
+        /// </summary>
+        /// <param name="criminalcode"></param>
+        /// <returns>Criminal code for ID</returns>
+
+        [Authorize]
         [HttpGet("{Id}")]
         public IActionResult Get([FromRoute]CriminalCodeId criminalcode)
         {
@@ -24,6 +32,7 @@ namespace ExercicioCDA.Controllers
             return Ok(criminalcode_db);
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult Post(PostCriminalCodes postcriminalcode)
         {
@@ -34,6 +43,7 @@ namespace ExercicioCDA.Controllers
             return BadRequest();
         }
 
+        [Authorize]
         [HttpPut]
         public IActionResult Put(PutCriminalCodes putcriminalcode)
         {
@@ -45,6 +55,7 @@ namespace ExercicioCDA.Controllers
             return BadRequest();
         }
 
+        [Authorize]
         [HttpDelete("{Id}")]
         public IActionResult Delete([FromRoute] CriminalCodeId criminalcode)
         {
