@@ -11,29 +11,48 @@
           "lib/netstandard2.0/Humanizer.dll": {}
         }
       },
-      "Microsoft.AspNet.WebApi.Client/4.0.20710": {
+      "JetBrains.Annotations/2021.1.0": {
         "type": "package",
-        "dependencies": {
-          "Microsoft.Net.Http": "[2.0.20710, 2.1.0)",
-          "Newtonsoft.Json": "4.5.6"
-        },
         "compile": {
-          "lib/net40/System.Net.Http.Formatting.dll": {}
+          "lib/netstandard2.0/JetBrains.Annotations.dll": {}
         },
         "runtime": {
-          "lib/net40/System.Net.Http.Formatting.dll": {}
+          "lib/netstandard2.0/JetBrains.Annotations.dll": {}
         }
       },
-      "Microsoft.AspNet.WebApi.Core/4.0.20710": {
+      "Microsoft.AspNet.WebApi.Client/5.2.2": {
         "type": "package",
-        "dependencies": {
-          "Microsoft.AspNet.WebApi.Client": "[4.0.20710, 4.1.0)"
-        },
         "compile": {
-          "lib/net40/System.Web.Http.dll": {}
+          "lib/net45/System.Net.Http.Formatting.dll": {}
         },
         "runtime": {
-          "lib/net40/System.Web.Http.dll": {}
+          "lib/net45/System.Net.Http.Formatting.dll": {}
+        }
+      },
+      "Microsoft.AspNet.WebApi.Core/5.2.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.WebApi.Client": "5.2.2"
+        },
+        "compile": {
+          "lib/net45/System.Web.Http.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Web.Http.dll": {}
+        }
+      },
+      "Microsoft.AspNet.WebApi.OData/5.7.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.WebApi.Client": "5.2.2",
+          "Microsoft.AspNet.WebApi.Core": "[5.2.2, 5.3.0)",
+          "Microsoft.Data.OData": "5.6.0"
+        },
+        "compile": {
+          "lib/net45/System.Web.Http.OData.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Web.Http.OData.dll": {}
         }
       },
       "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.3": {
@@ -92,6 +111,86 @@
         },
         "runtime": {
           "lib/netcoreapp2.0/_._": {}
+        }
+      },
+      "Microsoft.Data.Edm/5.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Microsoft.Data.Edm.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Microsoft.Data.Edm.dll": {}
+        },
+        "resource": {
+          "lib/net40/de/Microsoft.Data.Edm.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net40/es/Microsoft.Data.Edm.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net40/fr/Microsoft.Data.Edm.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net40/it/Microsoft.Data.Edm.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net40/ja/Microsoft.Data.Edm.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net40/ko/Microsoft.Data.Edm.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net40/ru/Microsoft.Data.Edm.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net40/zh-Hans/Microsoft.Data.Edm.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net40/zh-Hant/Microsoft.Data.Edm.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "Microsoft.Data.OData/5.6.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Data.Edm": "[5.6.0]",
+          "System.Spatial": "[5.6.0]"
+        },
+        "compile": {
+          "lib/net40/Microsoft.Data.OData.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Microsoft.Data.OData.dll": {}
+        },
+        "resource": {
+          "lib/net40/de/Microsoft.Data.OData.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net40/es/Microsoft.Data.OData.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net40/fr/Microsoft.Data.OData.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net40/it/Microsoft.Data.OData.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net40/ja/Microsoft.Data.OData.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net40/ko/Microsoft.Data.OData.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net40/ru/Microsoft.Data.OData.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net40/zh-Hans/Microsoft.Data.OData.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net40/zh-Hant/Microsoft.Data.OData.resources.dll": {
+            "locale": "zh-Hant"
+          }
         }
       },
       "Microsoft.Data.SqlClient/2.1.4": {
@@ -469,15 +568,6 @@
           "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll": {}
         }
       },
-      "Microsoft.Net.Http/2.0.20710": {
-        "type": "package",
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/_._": {}
-        }
-      },
       "Microsoft.NETCore.Platforms/3.1.0": {
         "type": "package",
         "compile": {
@@ -800,6 +890,44 @@
           }
         }
       },
+      "System.Spatial/5.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/System.Spatial.dll": {}
+        },
+        "runtime": {
+          "lib/net40/System.Spatial.dll": {}
+        },
+        "resource": {
+          "lib/net40/de/System.Spatial.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net40/es/System.Spatial.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net40/fr/System.Spatial.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net40/it/System.Spatial.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net40/ja/System.Spatial.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net40/ko/System.Spatial.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net40/ru/System.Spatial.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net40/zh-Hans/System.Spatial.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net40/zh-Hant/System.Spatial.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
       "System.Text.Encoding.CodePages/4.7.0": {
         "type": "package",
         "dependencies": {
@@ -835,6 +963,42 @@
             "rid": "win"
           }
         }
+      },
+      "X.PagedList/8.1.0": {
+        "type": "package",
+        "dependencies": {
+          "JetBrains.Annotations": "2021.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/X.PagedList.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/X.PagedList.dll": {}
+        }
+      },
+      "X.PagedList.Mvc/8.0.7": {
+        "type": "package",
+        "compile": {
+          "lib/net48/X.PagedList.Mvc.dll": {}
+        },
+        "runtime": {
+          "lib/net48/X.PagedList.Mvc.dll": {}
+        }
+      },
+      "X.PagedList.Mvc.Core/8.1.0": {
+        "type": "package",
+        "dependencies": {
+          "X.PagedList": "8.1.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/X.PagedList.Mvc.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/X.PagedList.Mvc.Core.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -855,31 +1019,68 @@
         "logo.png"
       ]
     },
-    "Microsoft.AspNet.WebApi.Client/4.0.20710": {
-      "sha512": "BwFtW0cGr8tg02XalvF8MmznOpYrhquD2eXWI0oF3LLSqLMFoFkb8Pmke/7SnqkiNc+YfsaUqdXEKbjhv1Ctrw==",
+    "JetBrains.Annotations/2021.1.0": {
+      "sha512": "n9JSw5Z+F+6gp9vSv4aLH6p/bx3GAYA6FZVq1wJq/TJySv/kPgFKLGFeS7A8Xa5X4/GWorh5gd43yjamUgnBNA==",
       "type": "package",
-      "path": "microsoft.aspnet.webapi.client/4.0.20710",
+      "path": "jetbrains.annotations/2021.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net40/System.Net.Http.Formatting.dll",
-        "lib/net40/System.Net.Http.Formatting.xml",
-        "microsoft.aspnet.webapi.client.4.0.20710.nupkg.sha512",
+        "icon.png",
+        "jetbrains.annotations.2021.1.0.nupkg.sha512",
+        "jetbrains.annotations.nuspec",
+        "lib/net20/JetBrains.Annotations.dll",
+        "lib/net20/JetBrains.Annotations.xml",
+        "lib/netstandard1.0/JetBrains.Annotations.deps.json",
+        "lib/netstandard1.0/JetBrains.Annotations.dll",
+        "lib/netstandard1.0/JetBrains.Annotations.xml",
+        "lib/netstandard2.0/JetBrains.Annotations.deps.json",
+        "lib/netstandard2.0/JetBrains.Annotations.dll",
+        "lib/netstandard2.0/JetBrains.Annotations.xml",
+        "lib/portable40-net40+sl5+win8+wp8+wpa81/JetBrains.Annotations.dll",
+        "lib/portable40-net40+sl5+win8+wp8+wpa81/JetBrains.Annotations.xml"
+      ]
+    },
+    "Microsoft.AspNet.WebApi.Client/5.2.2": {
+      "sha512": "YVq+s0WeXrPxJk57CoElbtMYf95j76uJcW6nue3Cs4eIer9sgUp4rasSo0gALX3ls1Zf2jMceOLik9X/sJyrwA==",
+      "type": "package",
+      "path": "microsoft.aspnet.webapi.client/5.2.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/System.Net.Http.Formatting.dll",
+        "lib/net45/System.Net.Http.Formatting.xml",
+        "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.dll",
+        "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.xml",
+        "microsoft.aspnet.webapi.client.5.2.2.nupkg.sha512",
         "microsoft.aspnet.webapi.client.nuspec"
       ]
     },
-    "Microsoft.AspNet.WebApi.Core/4.0.20710": {
-      "sha512": "ufD+tH4W7+eNsb4pzX5oFTDcgI6J3lffughFTkyLHPBZ+A4Eo+VncAxt3lbt9zxxbLHXIbgJHYRLvtgR5YEZAQ==",
+    "Microsoft.AspNet.WebApi.Core/5.2.2": {
+      "sha512": "P5boFqqGDq1XF7PVz1U4ju85wQLT0Pb5BbuiWy72cOmWXJKCCNqL+av6omi30knp62hpmfw+3rSCm+Nmt5zRgQ==",
       "type": "package",
-      "path": "microsoft.aspnet.webapi.core/4.0.20710",
+      "path": "microsoft.aspnet.webapi.core/5.2.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "content/web.config.transform",
-        "lib/net40/System.Web.Http.dll",
-        "lib/net40/System.Web.Http.xml",
-        "microsoft.aspnet.webapi.core.4.0.20710.nupkg.sha512",
+        "Content/web.config.transform",
+        "lib/net45/System.Web.Http.dll",
+        "lib/net45/System.Web.Http.xml",
+        "microsoft.aspnet.webapi.core.5.2.2.nupkg.sha512",
         "microsoft.aspnet.webapi.core.nuspec"
+      ]
+    },
+    "Microsoft.AspNet.WebApi.OData/5.7.0": {
+      "sha512": "odo0eVD9eKwwY4Kh1EeAmZwTgsaSYowzD8o9ho51Q6IriRY2fd5LyP3KFL8Cvsfx10bgoxyp68BlGU8bORVn+A==",
+      "type": "package",
+      "path": "microsoft.aspnet.webapi.odata/5.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/System.Web.Http.OData.dll",
+        "lib/net45/System.Web.Http.OData.xml",
+        "microsoft.aspnet.webapi.odata.5.7.0.nupkg.sha512",
+        "microsoft.aspnet.webapi.odata.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.3": {
@@ -1016,6 +1217,94 @@
         "ref/xamarinwatchos10/_._",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Microsoft.Data.Edm/5.6.0": {
+      "sha512": "85HVRPZznEBFLnkbNqBeZUAD7q5h+KdWDO0Beqs9fH/0DWtFX8p02jKIftY3vii7uUoWOdu4K6Kd/p7Xtz3TsA==",
+      "type": "package",
+      "path": "microsoft.data.edm/5.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/Microsoft.Data.Edm.dll",
+        "lib/net40/Microsoft.Data.Edm.xml",
+        "lib/net40/de/Microsoft.Data.Edm.resources.dll",
+        "lib/net40/es/Microsoft.Data.Edm.resources.dll",
+        "lib/net40/fr/Microsoft.Data.Edm.resources.dll",
+        "lib/net40/it/Microsoft.Data.Edm.resources.dll",
+        "lib/net40/ja/Microsoft.Data.Edm.resources.dll",
+        "lib/net40/ko/Microsoft.Data.Edm.resources.dll",
+        "lib/net40/ru/Microsoft.Data.Edm.resources.dll",
+        "lib/net40/zh-Hans/Microsoft.Data.Edm.resources.dll",
+        "lib/net40/zh-Hant/Microsoft.Data.Edm.resources.dll",
+        "lib/portable-net40+sl5+wp8+win8/Microsoft.Data.Edm.Portable.dll",
+        "lib/portable-net40+sl5+wp8+win8/Microsoft.Data.Edm.Portable.xml",
+        "lib/portable-net40+sl5+wp8+win8/de/Microsoft.Data.Edm.Portable.resources.dll",
+        "lib/portable-net40+sl5+wp8+win8/es/Microsoft.Data.Edm.Portable.resources.dll",
+        "lib/portable-net40+sl5+wp8+win8/fr/Microsoft.Data.Edm.Portable.resources.dll",
+        "lib/portable-net40+sl5+wp8+win8/it/Microsoft.Data.Edm.Portable.resources.dll",
+        "lib/portable-net40+sl5+wp8+win8/ja/Microsoft.Data.Edm.Portable.resources.dll",
+        "lib/portable-net40+sl5+wp8+win8/ko/Microsoft.Data.Edm.Portable.resources.dll",
+        "lib/portable-net40+sl5+wp8+win8/ru/Microsoft.Data.Edm.Portable.resources.dll",
+        "lib/portable-net40+sl5+wp8+win8/zh-Hans/Microsoft.Data.Edm.Portable.resources.dll",
+        "lib/portable-net40+sl5+wp8+win8/zh-Hant/Microsoft.Data.Edm.Portable.resources.dll",
+        "lib/sl4/Microsoft.Data.Edm.SL.dll",
+        "lib/sl4/Microsoft.Data.Edm.SL.xml",
+        "lib/sl4/de/Microsoft.Data.Edm.SL.resources.dll",
+        "lib/sl4/es/Microsoft.Data.Edm.SL.resources.dll",
+        "lib/sl4/fr/Microsoft.Data.Edm.SL.resources.dll",
+        "lib/sl4/it/Microsoft.Data.Edm.SL.resources.dll",
+        "lib/sl4/ja/Microsoft.Data.Edm.SL.resources.dll",
+        "lib/sl4/ko/Microsoft.Data.Edm.SL.resources.dll",
+        "lib/sl4/ru/Microsoft.Data.Edm.SL.resources.dll",
+        "lib/sl4/zh-Hans/Microsoft.Data.Edm.SL.resources.dll",
+        "lib/sl4/zh-Hant/Microsoft.Data.Edm.SL.resources.dll",
+        "microsoft.data.edm.5.6.0.nupkg.sha512",
+        "microsoft.data.edm.nuspec"
+      ]
+    },
+    "Microsoft.Data.OData/5.6.0": {
+      "sha512": "Lt+w1eHXe3+HOl0S4XrfO8AW2ALvKFBZtRfb9ZcmTahmE02HIlbaa3cy/jBTwNoFihfQ5vaBjNl4xspSmVcPRw==",
+      "type": "package",
+      "path": "microsoft.data.odata/5.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/Microsoft.Data.OData.dll",
+        "lib/net40/Microsoft.Data.OData.xml",
+        "lib/net40/de/Microsoft.Data.OData.resources.dll",
+        "lib/net40/es/Microsoft.Data.OData.resources.dll",
+        "lib/net40/fr/Microsoft.Data.OData.resources.dll",
+        "lib/net40/it/Microsoft.Data.OData.resources.dll",
+        "lib/net40/ja/Microsoft.Data.OData.resources.dll",
+        "lib/net40/ko/Microsoft.Data.OData.resources.dll",
+        "lib/net40/ru/Microsoft.Data.OData.resources.dll",
+        "lib/net40/zh-Hans/Microsoft.Data.OData.resources.dll",
+        "lib/net40/zh-Hant/Microsoft.Data.OData.resources.dll",
+        "lib/portable-net40+sl5+wp8+win8/Microsoft.Data.OData.Portable.dll",
+        "lib/portable-net40+sl5+wp8+win8/Microsoft.Data.OData.Portable.xml",
+        "lib/portable-net40+sl5+wp8+win8/de/Microsoft.Data.OData.Portable.resources.dll",
+        "lib/portable-net40+sl5+wp8+win8/es/Microsoft.Data.OData.Portable.resources.dll",
+        "lib/portable-net40+sl5+wp8+win8/fr/Microsoft.Data.OData.Portable.resources.dll",
+        "lib/portable-net40+sl5+wp8+win8/it/Microsoft.Data.OData.Portable.resources.dll",
+        "lib/portable-net40+sl5+wp8+win8/ja/Microsoft.Data.OData.Portable.resources.dll",
+        "lib/portable-net40+sl5+wp8+win8/ko/Microsoft.Data.OData.Portable.resources.dll",
+        "lib/portable-net40+sl5+wp8+win8/ru/Microsoft.Data.OData.Portable.resources.dll",
+        "lib/portable-net40+sl5+wp8+win8/zh-Hans/Microsoft.Data.OData.Portable.resources.dll",
+        "lib/portable-net40+sl5+wp8+win8/zh-Hant/Microsoft.Data.OData.Portable.resources.dll",
+        "lib/sl4/Microsoft.Data.OData.SL.dll",
+        "lib/sl4/Microsoft.Data.OData.SL.xml",
+        "lib/sl4/de/Microsoft.Data.OData.SL.resources.dll",
+        "lib/sl4/es/Microsoft.Data.OData.SL.resources.dll",
+        "lib/sl4/fr/Microsoft.Data.OData.SL.resources.dll",
+        "lib/sl4/it/Microsoft.Data.OData.SL.resources.dll",
+        "lib/sl4/ja/Microsoft.Data.OData.SL.resources.dll",
+        "lib/sl4/ko/Microsoft.Data.OData.SL.resources.dll",
+        "lib/sl4/ru/Microsoft.Data.OData.SL.resources.dll",
+        "lib/sl4/zh-Hans/Microsoft.Data.OData.SL.resources.dll",
+        "lib/sl4/zh-Hant/Microsoft.Data.OData.SL.resources.dll",
+        "microsoft.data.odata.5.6.0.nupkg.sha512",
+        "microsoft.data.odata.nuspec"
       ]
     },
     "Microsoft.Data.SqlClient/2.1.4": {
@@ -1646,22 +1935,6 @@
         "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.xml",
         "microsoft.identitymodel.tokens.6.10.0.nupkg.sha512",
         "microsoft.identitymodel.tokens.nuspec"
-      ]
-    },
-    "Microsoft.Net.Http/2.0.20710": {
-      "sha512": "OsB/5QO9tYJRLYIgBOhRl4Tssh3pw7+UAO9tMGMBg63f98GfjsniVIwLWRC0vcRr/F6HLP/NvRlHyGBhtD7Bmw==",
-      "type": "package",
-      "path": "microsoft.net.http/2.0.20710",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40/System.Net.Http.WebRequest.dll",
-        "lib/net40/System.Net.Http.WebRequest.xml",
-        "lib/net40/System.Net.Http.dll",
-        "lib/net40/System.Net.Http.xml",
-        "lib/net45/_._",
-        "microsoft.net.http.2.0.20710.nupkg.sha512",
-        "microsoft.net.http.nuspec"
       ]
     },
     "Microsoft.NETCore.Platforms/3.1.0": {
@@ -2317,6 +2590,50 @@
         "version.txt"
       ]
     },
+    "System.Spatial/5.6.0": {
+      "sha512": "O5hFsuKD1vUwXw9TrsbQ7XMlkL5qWHNJYSEchsaCmxFI60ffa3FSHnqvOBHKzLplaiA3enVPufDPgv9xSrp11A==",
+      "type": "package",
+      "path": "system.spatial/5.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/System.Spatial.dll",
+        "lib/net40/System.Spatial.xml",
+        "lib/net40/de/System.Spatial.resources.dll",
+        "lib/net40/es/System.Spatial.resources.dll",
+        "lib/net40/fr/System.Spatial.resources.dll",
+        "lib/net40/it/System.Spatial.resources.dll",
+        "lib/net40/ja/System.Spatial.resources.dll",
+        "lib/net40/ko/System.Spatial.resources.dll",
+        "lib/net40/ru/System.Spatial.resources.dll",
+        "lib/net40/zh-Hans/System.Spatial.resources.dll",
+        "lib/net40/zh-Hant/System.Spatial.resources.dll",
+        "lib/portable-net40+sl5+wp8+win8/System.Spatial.Portable.dll",
+        "lib/portable-net40+sl5+wp8+win8/System.Spatial.Portable.xml",
+        "lib/portable-net40+sl5+wp8+win8/de/System.Spatial.Portable.resources.dll",
+        "lib/portable-net40+sl5+wp8+win8/es/System.Spatial.Portable.resources.dll",
+        "lib/portable-net40+sl5+wp8+win8/fr/System.Spatial.Portable.resources.dll",
+        "lib/portable-net40+sl5+wp8+win8/it/System.Spatial.Portable.resources.dll",
+        "lib/portable-net40+sl5+wp8+win8/ja/System.Spatial.Portable.resources.dll",
+        "lib/portable-net40+sl5+wp8+win8/ko/System.Spatial.Portable.resources.dll",
+        "lib/portable-net40+sl5+wp8+win8/ru/System.Spatial.Portable.resources.dll",
+        "lib/portable-net40+sl5+wp8+win8/zh-Hans/System.Spatial.Portable.resources.dll",
+        "lib/portable-net40+sl5+wp8+win8/zh-Hant/System.Spatial.Portable.resources.dll",
+        "lib/sl4/System.Spatial.SL.dll",
+        "lib/sl4/System.Spatial.SL.xml",
+        "lib/sl4/de/System.Spatial.SL.resources.dll",
+        "lib/sl4/es/System.Spatial.SL.resources.dll",
+        "lib/sl4/fr/System.Spatial.SL.resources.dll",
+        "lib/sl4/it/System.Spatial.SL.resources.dll",
+        "lib/sl4/ja/System.Spatial.SL.resources.dll",
+        "lib/sl4/ko/System.Spatial.SL.resources.dll",
+        "lib/sl4/ru/System.Spatial.SL.resources.dll",
+        "lib/sl4/zh-Hans/System.Spatial.SL.resources.dll",
+        "lib/sl4/zh-Hant/System.Spatial.SL.resources.dll",
+        "system.spatial.5.6.0.nupkg.sha512",
+        "system.spatial.nuspec"
+      ]
+    },
     "System.Text.Encoding.CodePages/4.7.0": {
       "sha512": "aeu4FlaUTemuT1qOd1MyU4T516QR4Fy+9yDbwWMPHOHy7U8FD6SgTzdZFO7gHcfAPHtECqInbwklVvUK4RHcNg==",
       "type": "package",
@@ -2377,10 +2694,47 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "X.PagedList/8.1.0": {
+      "sha512": "xBZNtE+WU6FEKEapLvIdTFn4h3Ue03dsBE1LfnhzsLFIrop5bX6f7UuXnsenG/QK1OPHYknkC0a0vPBAMo0bXQ==",
+      "type": "package",
+      "path": "x.pagedlist/8.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/X.PagedList.dll",
+        "x.pagedlist.8.1.0.nupkg.sha512",
+        "x.pagedlist.nuspec"
+      ]
+    },
+    "X.PagedList.Mvc/8.0.7": {
+      "sha512": "Svb2MC/Cy5Q6z2Kj7e6hpWJJOs/R0o12oojyxXDsPat7YnrdYU3Tfs5ntk6SLbDLZNH0flPwNFQ1N+l5tQU/eg==",
+      "type": "package",
+      "path": "x.pagedlist.mvc/8.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net48/X.PagedList.Mvc.dll",
+        "x.pagedlist.mvc.8.0.7.nupkg.sha512",
+        "x.pagedlist.mvc.nuspec"
+      ]
+    },
+    "X.PagedList.Mvc.Core/8.1.0": {
+      "sha512": "Nqz9rSjU/St77F25GV8TogDfkVsbErC0o6o8hJtkkXrAilXHjsEALRMn8eVhgAFJ3XFWvvaHHSiDN3SnTGWSEA==",
+      "type": "package",
+      "path": "x.pagedlist.mvc.core/8.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp3.1/X.PagedList.Mvc.Core.dll",
+        "x.pagedlist.mvc.core.8.1.0.nupkg.sha512",
+        "x.pagedlist.mvc.core.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Microsoft.AspNet.WebApi.OData >= 5.7.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.3",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.2",
       "Microsoft.EntityFrameworkCore >= 6.0.2",
@@ -2390,7 +2744,10 @@
       "Swashbuckle.AspNetCore.Swagger >= 6.3.0",
       "Swashbuckle.AspNetCore.SwaggerGen >= 6.3.0",
       "Swashbuckle.AspNetCore.SwaggerUI >= 6.3.0",
-      "Swashbuckle.Core >= 5.6.0"
+      "Swashbuckle.Core >= 5.6.0",
+      "X.PagedList >= 8.1.0",
+      "X.PagedList.Mvc >= 8.0.7",
+      "X.PagedList.Mvc.Core >= 8.1.0"
     ]
   },
   "packageFolders": {
@@ -2432,6 +2789,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Microsoft.AspNet.WebApi.OData": {
+            "target": "Package",
+            "version": "[5.7.0, )"
+          },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[6.0.3, )"
@@ -2473,6 +2834,18 @@
           "Swashbuckle.Core": {
             "target": "Package",
             "version": "[5.6.0, )"
+          },
+          "X.PagedList": {
+            "target": "Package",
+            "version": "[8.1.0, )"
+          },
+          "X.PagedList.Mvc": {
+            "target": "Package",
+            "version": "[8.0.7, )"
+          },
+          "X.PagedList.Mvc.Core": {
+            "target": "Package",
+            "version": "[8.1.0, )"
           }
         },
         "imports": [
@@ -2502,7 +2875,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNet.WebApi.Client 4.0.20710' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'Microsoft.AspNet.WebApi.Client 5.2.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
       "libraryId": "Microsoft.AspNet.WebApi.Client",
       "targetGraphs": [
         "net6.0"
@@ -2512,7 +2885,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNet.WebApi.Core 4.0.20710' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'Microsoft.AspNet.WebApi.Core 5.2.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
       "libraryId": "Microsoft.AspNet.WebApi.Core",
       "targetGraphs": [
         "net6.0"
@@ -2522,8 +2895,28 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.Net.Http 2.0.20710' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
-      "libraryId": "Microsoft.Net.Http",
+      "message": "Package 'Microsoft.AspNet.WebApi.OData 5.7.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.WebApi.OData",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Data.Edm 5.6.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Data.Edm",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Data.OData 5.6.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Data.OData",
       "targetGraphs": [
         "net6.0"
       ]
@@ -2544,6 +2937,26 @@
       "warningLevel": 1,
       "message": "Package 'Swashbuckle.Core 5.6.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
       "libraryId": "Swashbuckle.Core",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Spatial 5.6.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "System.Spatial",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'X.PagedList.Mvc 8.0.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "X.PagedList.Mvc",
       "targetGraphs": [
         "net6.0"
       ]

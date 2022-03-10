@@ -11,6 +11,9 @@ namespace ExercicioCDA.Controllers
     [ApiController]
     public class HomeController : ControllerBase
     {
+        /// <summary>
+        /// If authorized, allow to get Home route.
+        /// </summary>
         [HttpGet]
         [Authorize]
         public IActionResult GetHome()

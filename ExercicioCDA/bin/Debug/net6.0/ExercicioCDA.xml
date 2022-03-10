@@ -4,12 +4,45 @@
         <name>ExercicioCDA</name>
     </assembly>
     <members>
+        <member name="M:ExercicioCDA.Controllers.AuthController.Login(ExercicioCDA.Models.Users)">
+            <summary>
+            Authentication System
+            </summary>
+            <param name="users"></param>
+            <returns></returns>
+        </member>
         <member name="M:ExercicioCDA.Controllers.CriminalCodesController.Get(ExercicioCDA.Models.Entities.CriminalCodes.CriminalCodeId)">
             <summary>
             Get the criminal code using the ID.
             </summary>
             <param name="criminalcode"></param>
             <returns>Criminal code for ID</returns>
+        </member>
+        <member name="M:ExercicioCDA.Controllers.CriminalCodesController.Post(ExercicioCDA.Models.Entities.CriminalCodes.PostCriminalCodes)">
+            <summary>
+            Register new criminal code in database.
+            </summary>
+            <param name="postcriminalcode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExercicioCDA.Controllers.CriminalCodesController.Put(ExercicioCDA.Models.Entities.CriminalCodes.PutCriminalCodes)">
+            <summary>
+            Update criminal codes.
+            </summary>
+            <param name="putcriminalcode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExercicioCDA.Controllers.CriminalCodesController.Delete(ExercicioCDA.Models.Entities.CriminalCodes.CriminalCodeId)">
+            <summary>
+            Delete criminal codes of database using the ID.
+            </summary>
+            <param name="criminalcode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExercicioCDA.Controllers.HomeController.GetHome">
+            <summary>
+            If authorized, allow to get Home route.
+            </summary>
         </member>
     </members>
 </doc>

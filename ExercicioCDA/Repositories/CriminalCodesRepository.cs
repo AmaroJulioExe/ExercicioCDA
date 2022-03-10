@@ -8,10 +8,9 @@ namespace ExercicioCDA.Repositories
         public bool Create(PostCriminalCodes criminalcode);
         public bool Update(PutCriminalCodes criminalcode);
         public CriminalCodes Read(int Id);
-        public bool Delete(int Id);
-        
+        public bool Delete(int Id);        
     }
-
+    
     public class CriminalCodesRepository : ICriminalRepository
     {
         private readonly _DbContext db;

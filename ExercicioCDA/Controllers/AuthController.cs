@@ -18,6 +18,11 @@ namespace ExercicioCDA.Controllers
             repos = _repos;
         }
 
+        /// <summary>
+        /// Authentication System
+        /// </summary>
+        /// <param name="users"></param>
+        /// <returns></returns>
         [HttpPost]
         [AllowAnonymous]
         public async Task<ActionResult<dynamic>> Login([FromBody] Users users)
