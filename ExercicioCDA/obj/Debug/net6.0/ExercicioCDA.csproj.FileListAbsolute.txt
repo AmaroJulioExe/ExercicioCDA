@@ -69,3 +69,5 @@ D:\Documents\Programação\exercicioCDA\ExercicioCDA\bin\Debug\net6.0\System.Net
 D:\Documents\Programação\exercicioCDA\ExercicioCDA\bin\Debug\net6.0\System.Web.Http.dll
 D:\Documents\Programação\exercicioCDA\ExercicioCDA\bin\Debug\net6.0\Newtonsoft.Json.dll
 D:\Documents\Programação\exercicioCDA\ExercicioCDA\bin\Debug\net6.0\Swashbuckle.Core.dll
+D:\Documents\Programação\exercicioCDA\ExercicioCDA\bin\Debug\net6.0\ExercicioCDA.xml
+D:\Documents\Programação\exercicioCDA\ExercicioCDA\obj\Debug\net6.0\ExercicioCDA.xml

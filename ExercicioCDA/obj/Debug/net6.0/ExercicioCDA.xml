@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ExercicioCDA</name>
+    </assembly>
+    <members>
+        <member name="M:ExercicioCDA.Controllers.CriminalCodesController.Get(ExercicioCDA.Models.Entities.CriminalCodes.CriminalCodeId)">
+            <summary>
+            Get the criminal code using the ID.
+            </summary>
+            <param name="criminalcode"></param>
+            <returns>Criminal code for ID</returns>
+        </member>
+    </members>
+</doc>

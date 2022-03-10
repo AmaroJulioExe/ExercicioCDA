@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ExercicioCDA.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class CriminalCodesController : ControllerBase
     {
@@ -24,16 +24,16 @@ namespace ExercicioCDA.Controllers
         /// <param name="criminalcode"></param>
         /// <returns>Criminal code for ID</returns>
 
-        [Authorize]
         [HttpGet("{Id}")]
+        [Authorize]
         public IActionResult Get([FromRoute]CriminalCodeId criminalcode)
         {
             var criminalcode_db = repos.Read(criminalcode.Id);
             return Ok(criminalcode_db);
         }
 
-        [Authorize]
         [HttpPost]
+        [Authorize]
         public IActionResult Post(PostCriminalCodes postcriminalcode)
         {
             if (repos.Create(postcriminalcode))
@@ -43,8 +43,8 @@ namespace ExercicioCDA.Controllers
             return BadRequest();
         }
 
-        [Authorize]
         [HttpPut]
+        [Authorize]
         public IActionResult Put(PutCriminalCodes putcriminalcode)
         {
             if (repos.Update(putcriminalcode))
@@ -55,8 +55,8 @@ namespace ExercicioCDA.Controllers
             return BadRequest();
         }
 
-        [Authorize]
         [HttpDelete("{Id}")]
+        [Authorize]
         public IActionResult Delete([FromRoute] CriminalCodeId criminalcode)
         {
             if (repos.Delete(criminalcode.Id))

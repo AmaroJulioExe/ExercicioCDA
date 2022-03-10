@@ -7,6 +7,8 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Swashbuckle.AspNetCore.Swagger;
 using System.Reflection;
+using Microsoft.OpenApi.Models;
+using ExercicioCDA;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,30 +21,28 @@ builder.Services.AddDbContext<_DbContext>(x => x.UseSqlServer(
         builder.Configuration.GetConnectionString("DefaultConnection")
     ));
 
-// Build Authenticate DbContext to connect with database and generate Auth tables
-builder.Services.AddDbContext<ApplicationDbContext>(x => x.UseSqlServer(
-        builder.Configuration.GetConnectionString("DefaultConnection")
-    ));
-
-// Build Identity for JWT Authentication - Users
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-    .AddEntityFrameworkStores<ApplicationDbContext>()
-    .AddDefaultTokenProviders();
-
 // Build MVC support and set compatibility version
 builder.Services.AddMvc();
 
-// Validate signature with the secure key for authenticate
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
-        options.TokenValidationParameters = new TokenValidationParameters
+// Adding Authentication
+var key = Encoding.ASCII.GetBytes(Settings.Secret);
+builder.Services.AddAuthentication(x =>
+{
+    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+    .AddJwtBearer(x =>
+    {
+        x.RequireHttpsMetadata = false;
+        x.SaveToken = true;
+        x.TokenValidationParameters = new TokenValidationParameters
         {
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(key),
             ValidateIssuer = false,
             ValidateAudience = false,
-            ValidateLifetime = true,
-            ValidateIssuerSigningKey = true,
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:key"])),
-            ClockSkew = TimeSpan.Zero
-        });
+        };
+    });
 
 // Build scoped for interface of Criminal Codes repository
 builder.Services.AddScoped<ICriminalRepository, CriminalCodesRepository>();
@@ -51,7 +51,17 @@ builder.Services.AddScoped<ICriminalRepository, CriminalCodesRepository>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(opt =>
 {
-    opt.SwaggerDoc("v1", new Info { Title = "ExercicioCDA_API", Version = "v1" });
+    opt.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "Criminal Codes API",
+        Version = "v1",
+        Description = "An Criminal Codes API for Cidade Alta Police.",
+        License = new OpenApiLicense
+        {
+            Name = "Licensed by Julio Amaro",
+            Url = new Uri("https://github.com/AmaroJulioExe")
+        }
+    });
 
     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
@@ -71,6 +81,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 
