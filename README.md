@@ -1,7 +1,7 @@
 # Painel de Códigos Penais - Cidade Alta RP
  
  ![badge-finalizado](https://img.shields.io/badge/Status-FINALIZADO-blue)
- ![badge-dotnet6](https://img.shields.io/badge/.NET-6.0-blueviolet)
+ ![badge-dotnet6](https://img.shields.io/badge/ASP.NET%20Core-6.0-blueviolet)
  
  
  WEB API para integração do painel para Códigos Penais da Cidade Alta RP - GTA 5 Roleplay.
